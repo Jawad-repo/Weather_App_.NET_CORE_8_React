@@ -29,10 +29,11 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
 # Configuration and Execution
 
-## CORS Configuration in Backend (MyWebApi)
- 1- The CORS service is registered in Program.cs. Update the CORS policy with your local port where the React app will run.
-
- 2- API Base URL in Frontend (appview/src/config.js)
+## CORS Configuration
+ 1- Backend
+    The CORS service is registered in Program.cs. Update the CORS policy with your local port where the React app will run.
+ 2- Front end (MyWebApi)
+   API Base URL in Frontend (appview/src/config.js)
    In config.js, set the BASE_URL to the URL where your API is hosted, typically your local backend server URL during development.
 
 ## Running the Project
