@@ -27,7 +27,7 @@ Project Structure
 |-MyWebApi.sln
 
 
-### Configuration and Execution
+## Configuration and Execution
 
 ## CORS Configuration in Backend (MyWebApi)
  1- The CORS service is registered in Program.cs. Update the CORS policy with your local port where the React app will run.
