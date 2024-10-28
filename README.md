@@ -26,13 +26,14 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 |--styles.css
 |-MyWebApi.sln
 
-  .
-    ├── ...
-    ├── test                    # Test files (alternatively `spec` or `tests`)
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
-    └── ...
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
 
 
 # Configuration and Execution
