@@ -6,26 +6,6 @@ Backend: .NET Core 8 API with WeatherService.cs
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
 ## Project Structure
-|-
-|--
-|-
-|--
-|-
-|--
-|- (React Application)
-|--
-|---
-|---
-|----
-|----
-|----
-|----
-|--
-|--
-|--
-|--
-|-
-
     .
     ├── MyClassLib                                   # Service API
     |   └── WeatherService.cs        
