@@ -6,33 +6,46 @@ Backend: .NET Core 8 API with WeatherService.cs
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
 ## Project Structure
-|-MyClassLib
-|--WeatherService.cs
-|-MyTests
-|--WeatherServiceTest.cs
-|-MyWebApi
-|--Program.cs
-|-appview (React Application)
-|--src
-|---components
-|----App.css
-|----App.js
-|----App.test.js
-|----Forecast.js
-|----SearchEngine.js
-|--config.js
-|--index.css
-|--index.js
-|--styles.css
-|-MyWebApi.sln
+|-
+|--
+|-
+|--
+|-
+|--
+|- (React Application)
+|--
+|---
+|---
+|----
+|----
+|----
+|----
+|--
+|--
+|--
+|--
+|-
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
+    ├── MyClassLib                                   # Service API
+    |   └── WeatherService.cs        
+    ├── MyTests                                      # .Net Unit test 
+    |   └── WeatherServiceTest.cs 
+    ├── MyWebApi                                     # .Net Request pipeline
+    |   └── Program.cs                  
+    ├── appview                                      # Frontend React App            
+    |   |── src   
+    |   |   └── components 
+    |   |       |── App.css 
+    |   |       |──App.js
+    |   |       |── App.test.js 
+    |   |       |── Forecast.js
+    |   |       └──SearchEngine.js
+    |   |── config.js
+    |   |── index.css
+    |   |── index.js
+    |   └──styles.css
+    ├── MyWebApi.sln  
     └── README.md
 
 
@@ -61,9 +74,9 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
    Open Visual Studio, navigate to the Test Explorer, and click "Run All Tests" to execute all backend unit tests.
 
 2- React Unit Tests
-   To run the frontend unit tests: your_local_path/appview? npm test
+   To run the frontend unit tests: your_local_path/appview? 'npm test'
    
-   To view the complete test coverage: npm test -- --coverage
+   To view the complete test coverage: 'npm test -- --coverage'
 
    You can also view the detailed coverage report in your browser by opening:
    your_local_path/appview/coverage/lcov-report/index.html   
