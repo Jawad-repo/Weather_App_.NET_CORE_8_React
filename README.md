@@ -1,11 +1,11 @@
-Weather Forecast Project
+## Weather Forecast Project
 This project is a weather forecast application comprising a backend in .NET Core 8 and a frontend in React. It provides current and forecast weather information based on city name input.
 
 This application uses:
 Backend: .NET Core 8 API with WeatherService.cs
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
-Project Structure
+## Project Structure
 |-MyClassLib
 |--WeatherService.cs
 |-MyTests
@@ -29,7 +29,7 @@ Project Structure
 
 ## Configuration and Execution
 
-## CORS Configuration in Backend (MyWebApi)
+# CORS Configuration in Backend (MyWebApi)
  1- The CORS service is registered in Program.cs. Update the CORS policy with your local port where the React app will run.
 
  2- API Base URL in Frontend (appview/src/config.js)
@@ -59,3 +59,4 @@ Project Structure
    your_local_path/appview/coverage/lcov-report/index.html   
 
 Feel free to explore and modify the code to fit your requirements. For questions or issues, please raise an issue in this repository.
+# Email: jawadahmed.info@gmail.com
