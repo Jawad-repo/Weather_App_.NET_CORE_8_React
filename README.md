@@ -4,7 +4,6 @@ This project is a weather forecast application comprising a backend in **.NET Co
 This application uses:
 
 Backend: .NET Core 8 API 
-
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
 ![image](https://github.com/user-attachments/assets/ff8369fc-bb96-4bf0-be95-d84ef893377a)
