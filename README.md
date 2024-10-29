@@ -1,8 +1,8 @@
 # Weather Forecast Project
-This project is a weather forecast application comprising a backend in .NET Core 8 and a frontend in React. It provides current and forecast weather information based on city name input.
+This project is a weather forecast application comprising a backend in **.NET Core 8** minimal API with **xUnit** test and a frontend in **React** with **jest** unit test. It provides the _predefine_ current and forecast weather information based on city name or any input.
 
 This application uses:
-Backend: .NET Core 8 API with WeatherService.cs
+Backend: .NET Core 8 API 
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
 ## Project Structure
