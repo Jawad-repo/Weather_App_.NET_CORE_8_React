@@ -1,4 +1,4 @@
-# Weather Forecast Project (.NET CORE 8 Minimal API and REACT)
+## Weather Forecast Project (.NET CORE 8 Minimal API and REACT)
 This project is a weather forecast application comprising a backend in **.NET Core 8** minimal API with **xUnit** test and a frontend in **React** with **jest** unit test. It provides the _predefine_ current and forecast weather information based on city name or any input.
 
 This application uses:
