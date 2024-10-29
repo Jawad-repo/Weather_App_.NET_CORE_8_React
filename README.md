@@ -9,8 +9,7 @@ This application uses:
 ![image](https://github.com/user-attachments/assets/ff8369fc-bb96-4bf0-be95-d84ef893377a)
 
 ## Project Structure
-    .
-    ├── MyClassLib                                   # Service API
+    |── MyClassLib                                   # Service API
     |   └── WeatherService.cs        
     ├── MyTests                                      # .Net Unit test 
     |   └── WeatherServiceTest.cs 
@@ -20,10 +19,10 @@ This application uses:
     |   |── src   
     |   |   └── components 
     |   |       |── App.css 
-    |   |       |──App.js
+    |   |       |── App.js
     |   |       |── App.test.js 
     |   |       |── Forecast.js
-    |   |       └──SearchEngine.js
+    |   |       └── SearchEngine.js
     |   |── config.js
     |   |── index.css
     |   |── index.js
