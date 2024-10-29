@@ -5,6 +5,8 @@ This application uses:
 Backend: .NET Core 8 API 
 Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
+![image](https://github.com/user-attachments/assets/ff8369fc-bb96-4bf0-be95-d84ef893377a)
+
 ## Project Structure
     .
     ├── MyClassLib                                   # Service API
@@ -27,8 +29,6 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
     |   └──styles.css
     ├── MyWebApi.sln  
     └── README.md
-![image](https://github.com/user-attachments/assets/ff8369fc-bb96-4bf0-be95-d84ef893377a)
-
 
 # Configuration and Execution
 
@@ -52,8 +52,13 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
    This should automatically open the app in your browser. Enter any city name and press Enter to see the weather results.
    
 ## Running Unit Tests
+
+
+
 1- .NET Core Unit Tests
    Open Visual Studio, navigate to the Test Explorer, and click "Run All Tests" to execute all backend unit tests.
+   ![image](https://github.com/user-attachments/assets/1c4ffc6b-6984-40e8-881d-f86e739227d2)
+
 
 2- React Unit Tests
    To run the frontend unit tests: your_local_path/appview? 'npm test'
@@ -62,6 +67,7 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
    You can also view the detailed coverage report in your browser by opening:
    your_local_path/appview/coverage/lcov-report/index.html   
+   ![image](https://github.com/user-attachments/assets/02be2520-4264-4e59-aeb2-32ac1292df32)
 
 Feel free to explore and modify the code to fit your requirements. For questions or issues, please raise an issue in this repository.
 # Email: jawadahmed.info@gmail.com
