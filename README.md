@@ -27,6 +27,7 @@ Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
     |   └──styles.css
     ├── MyWebApi.sln  
     └── README.md
+![image](https://github.com/user-attachments/assets/ff8369fc-bb96-4bf0-be95-d84ef893377a)
 
 
 # Configuration and Execution
