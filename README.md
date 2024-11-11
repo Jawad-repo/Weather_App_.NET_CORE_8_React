@@ -6,8 +6,7 @@ This application uses:
 - Backend: .NET Core 8 API 
 - Frontend: React with custom components (App.js, Forecast.js, SearchEngine.js)
 
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/acecd9f0-afaa-4782-84ed-8029876733c1)
 
 ## Project Structure
     |── MyClassLib                                   # Service API
