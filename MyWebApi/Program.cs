@@ -1,6 +1,13 @@
 using MyClassLib;
 
+
+// Add services to the container.
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
@@ -12,14 +19,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<WeatherService>();
+
+
+// Configure the HTTP request pipeline.
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -28,28 +34,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//Enable Cors
+// Enable CORS
 app.UseCors("MyCorsPolicy");
 
 
-app.MapGet("/weatherforecast/{city}", (string city) =>
+app.MapGet("/weatherforecast/{city}", (string city, WeatherService weatherService) =>
 {
-    var weatherService = new WeatherService();
+
     return weatherService.GetWeatherResponse(city);
 
 })
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithName("GetWeatherForecast");
 
-app.MapGet("/GetDaysWeatherResponse/{city}", (string city) =>
+app.MapGet("/GetDaysWeatherResponse/{city}", (string city, WeatherService weatherService) =>
 {
 
-    var weatherService = new WeatherService();
     return weatherService.GetDaysWeatherResponse(city);
 
 })
-.WithName("GetDaysWeatherResponse")
-.WithOpenApi();
+.WithName("GetDaysWeatherResponse");
 
 app.Run();
 

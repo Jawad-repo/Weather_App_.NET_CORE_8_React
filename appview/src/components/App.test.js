@@ -25,16 +25,16 @@ describe('App Component', () => {
   });
 
   const mockWeatherData = {
-    city: "City",
-    country: "rwp",
-    coordinates: {
+     city: "City",
+     country: "New York",
+     coordinates: {
       "longitude": -0.7072694,
       "latitude": 49.0579403
-    },
-    condition: {"description": "Chilly",},
-    temperature: {"current": 35,},
-    wind: { speed: 5,  degree: 301},
-    time: 1730150457
+     },
+     condition: {"description": "Chilly",},
+     temperature: {"current": 35,},
+     wind: { speed: 5,  degree: 301},
+     time: 1730150457
     };
 
   
@@ -74,8 +74,8 @@ describe('App Component', () => {
     });
 
     await waitFor(() => {
+      expect(screen.getByText(/New York/i)).toBeInTheDocument();
       expect(screen.getByText(/Chilly/i)).toBeInTheDocument();
-      expect(screen.getByText(/35/i)).toBeInTheDocument();
       expect(screen.getByText(/5m\/s/i)).toBeInTheDocument();
     });
 

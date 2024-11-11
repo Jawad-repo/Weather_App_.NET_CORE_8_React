@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MyClassLib
 {
     public class WeatherService
@@ -31,7 +26,7 @@ namespace MyClassLib
             var weatherData = new WeatherResponse
             {
                 City = "City", // Hardcoded for now, you can make it dynamic
-                Country = city, // Hardcoded for now, you can make it dynamic
+                Country = city,
                 Coordinates = new Coordinates
                 {
                     Longitude = -0.7072694,

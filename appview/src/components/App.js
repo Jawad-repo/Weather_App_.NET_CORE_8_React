@@ -16,6 +16,15 @@ function App() {
     },
     error: false,
   });
+const fetchWeatherdata = async (query) => {
+  const url = `${BASE_URL}/weatherforecast/${query}`;
+  try {
+    const res = await axios.get(url);
+    setWeather({ data: res.data, loading: false, error: false });
+  } catch (error) {
+    setWeather({ ...weather, data: {}, error: true });
+  }
+}
 
   const lastQueryRef = useRef("");
 
@@ -26,28 +35,13 @@ function App() {
       (query !== lastQueryRef.current)
     ) {
       lastQueryRef.current = query;
-      setWeather({ ...weather, loading: true });
-      const url = `${BASE_URL}/weatherforecast/${query}`;
-      try {
-        const res = await axios.get(url);
-        setWeather({ data: res.data, loading: false, error: false });
-      } catch (error) {
-        setWeather({ ...weather, data: {}, error: true });
-      }
+      fetchWeatherdata(query);
     }
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const url = `${BASE_URL}/weatherforecast/${query}`;
-      try {
-        const response = await axios.get(url);
-        setWeather({ data: response.data, loading: false, error: false });
-      } catch (error) {
-        setWeather({ data: {}, loading: false, error: true });
-      }
-    };
-    fetchData();
+      const defaultCity='';
+      fetchWeatherdata(defaultCity);
   }, []);
 
   return (
@@ -55,15 +49,11 @@ function App() {
       <SearchEngine query={query} setQuery={setQuery} search={search} />
       {weather.loading && (
         <>
-          <br />
-          <br />
           <h4>Searching..</h4>
         </>
       )}
       {weather.error && (
         <>
-          <br />
-          <br />
           <span className="error-message">
             <span style={{ fontFamily: "font" }}>
               Sorry, city not found. Please try again.

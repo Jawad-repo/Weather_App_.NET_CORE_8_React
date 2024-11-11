@@ -8,19 +8,19 @@ function Forecast({ weather }) {
   const [forecastData, setForecastData] = useState([]);
   const [isCelsius, setIsCelsius] = useState(true); // Track temperature unit
 
+  const fetchForecastData = async () => {
+    const apiKey = "b03a640e5ef6980o4da35b006t5f2942";
+    const url = `${BASE_URL}/GetDaysWeatherResponse/${data.city}`;
+
+    try {
+      const response = await axios.get(url);
+      setForecastData(response.data.daily);
+    } catch (error) {
+      console.log("Error fetching forecast data:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchForecastData = async () => {
-      const apiKey = "b03a640e5ef6980o4da35b006t5f2942";
-      const url = `${BASE_URL}/GetDaysWeatherResponse/${data.city}`;
-
-      try {
-        const response = await axios.get(url);
-        setForecastData(response.data.daily);
-      } catch (error) {
-        console.log("Error fetching forecast data:", error);
-      }
-    };
-
     fetchForecastData();
   }, [data.country]);
 
@@ -55,7 +55,7 @@ function Forecast({ weather }) {
 
   const renderTemperature = (temperature) => {
     if (isCelsius) {
-      return Math.round(temperature);
+      return convertToCelsius(temperature);
     } else {
       return convertToFahrenheit(temperature);
     }
@@ -87,14 +87,14 @@ function Forecast({ weather }) {
       <p className="weather-des">{data.condition.description}</p>
       <div className="weather-info">
         <div className="col">
-          <ReactAnimatedWeather icon="WIND" size={40}/>
+          <ReactAnimatedWeather icon="WIND" size={80}/>
           <div>
             <p className="wind">{data.wind.speed}m/s</p>
             <p>Wind speed</p>
           </div>
         </div>
         <div className="col">
-          <ReactAnimatedWeather icon="RAIN" size={40}/>
+          <ReactAnimatedWeather icon="RAIN" size={80}/>
           <div>
             <p className="humidity">{data.temperature.humidity}%</p>
             <p>Humidity</p>
